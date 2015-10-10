@@ -1,0 +1,10 @@
+{
+  "default_attributes": {
+    "mysql": {
+      "server": {
+        "password": "root"
+      }
+    }
+  }
+  
+}

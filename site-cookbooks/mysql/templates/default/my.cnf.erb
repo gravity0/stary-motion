@@ -1,0 +1,31 @@
+[mysqld_safe]
+user=mysql
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+
+sql_mode = NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+character_set_server = <%= @server_charset %>
+skip-character-set-client-handshake
+
+max_connections = <%= @max_connections %>
+
+query_cache_size  = <%= @query_cache_size %>
+table_cache_size  = <%= @table_cache_size %>
+thread_cache_size = <%= @thread_cache_size %>
+
+join_buffer_size     = <%= @join_buffer_size %>
+sort_buffer_size     = <%= @sort_buffer_size %>
+read_rnd_buffer_size = <%= @read_rnd_buffer_size %>
+
+<% if @innodb_file_per_table %>innodb_file_per_table<% end %>
+innodb_data_file_path           = <%= @innodb_data_file_path %>
+innodb_autoextend_increment     = <%= @innodb_autoextend_increment %>
+innodb_buffer_pool_size         = <%= @innodb_buffer_pool_size %>
+innodb_additional_mem_pool_size = <%= @innodb_additional_mem_pool_size %>
+innodb_write_io_threads         = <%= @innodb_write_io_threads %>
+innodb_read_io_threads          = <%= @innodb_read_io_threads %>
+innodb_log_buffer_size          = <%= @innodb_log_buffer_size %>
+innodb_log_file_size            = <%= @innodb_log_file_size %>
+innodb_flush_log_at_trx_commit  = <%= @innodb_flush_log_at_trx_commit %>
+
