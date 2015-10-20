@@ -1,22 +1,22 @@
-# set /etc/my.cnf
-template '/etc/my.cnf' do
-  owner 'root'
-  group 'root'
-  mode 644
-  notifies :restart, "service[mysqld]"
+remote_file "#{Chef::Config[:file_cache_path]}/mysql-community-release-el7-5.noarch.rpm" do
+  source 'http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm'
+  action :create
 end
 
-["mysql","mysql-server"].each do |pkg|
-  package pkg do
-    action :install
-  end
+rpm_package 'mysql-community-release' do
+  source "#{Chef::Config[:file_cache_path]}/mysql-community-release-el7-5.noarch.rpm"
+  action :install
 end
 
-service "mysqld" do
-  supports :status => true, :restart => true, :reload => true
+package 'mysql-server' do
+  action :install
+end
+
+service 'mysqld' do
   action [:enable, :start]
 end
 
+
 execute "create database" do
-  command "mysql -u root --password=\"#{node["mysql"]["server_root_password"]}\" -e \"CREATE DATABASE IF NOT EXISTS db_name;\""
+  command "mysql -u root --password=\"\" -e \"CREATE DATABASE IF NOT EXISTS stary_motion;\""
 end

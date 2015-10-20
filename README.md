@@ -1,0 +1,2 @@
+#cookbooksディレクトリへインストールできる
+berks vendor cookbooks

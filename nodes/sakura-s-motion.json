@@ -15,8 +15,9 @@
     "recipe[mysql]",
     "recipe[app-play2.4]",
     "recipe[java]",
-    "recipe[git]",
-    "recipe[s-motion-base::git_clone]"
+    "recipe[simple_iptables]",
+    "recipe[iptables]",
+    "recipe[git]"
   ],
   "automatic": {
     "ipaddress": "s-motion"

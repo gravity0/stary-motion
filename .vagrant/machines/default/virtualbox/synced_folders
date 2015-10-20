@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/greapflute/project/practice/s-motion","disabled":false}}}
+{"rsync":{"/home/vagrant/sync":{"type":"rsync","guestpath":"/home/vagrant/sync","hostpath":"/Users/greapflute/project/practice/s-motion","disabled":false,"owner":"vagrant","group":"vagrant"}}}

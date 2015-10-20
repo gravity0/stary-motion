@@ -1,7 +1,7 @@
-name             'wrapper_project_cookbook'
+name             'iptables'
 maintainer       'YOUR_COMPANY_NAME'
 maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
-description      'Installs/Configures wrapper_project_cookbook'
+description      'Installs/Configures iptables'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'

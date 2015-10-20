@@ -1,5 +1,24 @@
 DEPENDENCIES
+  git
+  java
+  simple_iptables
+    git: git://github.com/dcrosta/cookbook-simple-iptables.git
+    revision: 6bf29e280a67d58db7388219bc36f6fa3ff571f5
   yum
 
 GRAPH
+  build-essential (2.2.4)
+  chef_handler (1.2.0)
+  dmg (2.2.2)
+  git (4.3.4)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  java (1.35.0)
+  simple_iptables (0.7.2)
+  windows (1.38.2)
+    chef_handler (>= 0.0.0)
   yum (3.7.1)
+  yum-epel (0.6.3)
+    yum (~> 3.2)
